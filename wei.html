@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="js/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="js/swiper-3.3.1.min.css"/>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.total{width: 100vw;height: 100vh;}
+			.single{width: 100vw;height: 100%;background: #f8f3f7;}
+			.to1{margin-top:1.8rem ;margin-left: 1.8rem;width: 40%;height: 23%;}
+			.to2{margin-top:2rem ;margin-left: 1.8rem;width: 40%;height: 5%;}
+			.to3{position:absolute;left:0;bottom:0;width: 100%;height: 10%;z-index: 900;}
+			.single1{width: 100vw;height: 100%;background: #f8f3f7;}
+			.to4{width: 100%;height: 60%;}
+			.to5{width: 100%;height: 20%;margin-top: 5%;}
+			.single2{width: 100vw;height: 100%;background: #f8f3f7;}
+			.to6{width:100%;height: 18%;margin-top: 1rem;}
+			.to7{width:100%;height: 10%;}
+			.to8{width:100%;height: 27%;}
+			.to9{width:100%;height: 20%;}
+			.to10{width: 100%;height: 10%;margin-top: 1rem;}
+			.to11{width: 100%;height: 30%;}
+			.to12{width: 100%;height: 25%;}
+			.to13{width: 100%;height: 25%;position: absolute;left: 0;top: 0;animation: yin 2s linear infinite;}
+			.to14{width: 100%;height: 10%;margin-top: 4.5rem;}
+			.to15{width: 40%;height:10% ;margin-left: 2.2rem;}
+@keyframes yin{
+	from{transform: translateY(0);}
+	to{transform: translateY(1rem);}
+}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container total">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide single">
+        	<img src="img/2_03.png"  class="ani to1"    swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/2_06.png"  class="ani to2"    swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/2_08.png"  class="ani to3"    swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/>
+        </div>
+        <div class="swiper-slide single1">
+        	<img src="img/3_02.png"  class="ani to4"    swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/3_04.png"  class="ani to5"    swiper-animate-effect="shake" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+        </div>
+        <div class="swiper-slide single1">
+            <img src="img/4_02.png"  class="ani to6"    swiper-animate-effect="bounceInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/4_03.png"  class="ani to7"    swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/>
+        	<img src="img/4_04.png"  class="ani to8"    swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/4_05.png"  class="ani to9"    swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/>		
+        </div>
+        <div class="swiper-slide single">
+        	<img src="img/5_02.png"  class="ani to10"    swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/5_04.png"  class="ani to11"    swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/5_06.png"  class="ani to12"    swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/>
+        </div>
+        <div class="swiper-slide single">
+        	<img src="img/6_02.png"  class="ani to13"    swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"/>
+        	<img src="img/6_04.png"  class="ani to14"    swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"/>
+    <a href="login.html">   	<img src="img/6_07.png"  class="ani to15"    swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s"/></a> 
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+
+</div>
+
+
+<script type="text/javascript">
+	  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: false,
+    
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    
+
+
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+
+
+
+
+
+
+
+  })  
+</script>
+	</body>
+</html>

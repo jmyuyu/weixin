@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style type="text/css">
+			body{background: #f7f7f7;}
+			ul{list-style: none;}
+			a{text-decoration: none;color: white;}
+			*{margin: 0;padding: 0;}
+			@font-face {font-family: 'iconfont';
+    src: url('icons/iconfont.eot'); /* IE9*/
+    src: url('icons/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('icons/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('icons/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('icons/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+			header{width: 100%;height: 2.68rem;}
+			.index{font-size:1.2rem ;text-align: center;line-height: 2.68rem;background: url(img/bj.png) repeat-x;color: white;}
+			.index-p{width: 3.21rem;height:1.78rem ;border:1px solid #d94748 ;border-radius:0.25rem ;text-align: center;line-height: 1.78rem;position: absolute;right: 1rem;top: 0.40rem;background: #be0c0c;color: white;}
+footer{width: 100%;height: 3.06rem;position: fixed;left: 0;bottom: 0;background: #484850;}
+.footul li{width: 20%;height: 100%;float: left;text-align: center;font-family: 'iconfont';color: white;}
+.footul li .icon{font-size:1.5rem ;}
+.plp{width:80%;height: 6vh;margin-left: 10%;margin-top: 10%;border: 1px solid #999999;line-height: 6vh;background: white;}
+.plp input{border: 0;}
+.plp1{width: 40%;margin-left: 30%;height: 6vh;text-align: center;line-height: 6vh;margin-top: 20vh;background: white;}
+.plp1 input{width: 100%;height: 100%;}
+.te{position: relative;left:40%;top: 0;margin-top: 10%;}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="index">
+				用户注册
+			
+			</div>
+			
+		</header>
+		
+		
+		<aside>
+			<form action="" method="post">
+			<p class="plp">账号：<input type="text" name="" id="num" value="" /></p>
+		    <p class="plp">	密码：<input type="password" name="" id="pos" value="" /></p>
+	     	<p class="plp">	重新输入密码：<input type="password" name="" id="pos1" value="" /></p>
+	     	<p class="te"></p>
+	     	<p class="plp1"><input type="button" name="" id="btn" value="点击注册" /></p>
+			</form>
+			
+		</aside>
+			
+		<footer>
+			<ul class="footul">
+				<li>
+					<span class="icon">&#xe644;</span><br />
+					<span><a href="">首页</a></span>
+				</li>
+				<li>
+					<span class="icon">&#xe692;</span><br />
+					<span><a href="">分类</a></span></li>
+				<li>
+					<span class="icon">&#xe61b;</span><br />
+					<span><a href="">购物车</a></span></li>
+				<li>
+					<span class="icon">&#xe646;</span><br />
+					<span><a href="">我的秀</a></span></li>
+				<li>
+					<span class="icon">&#xe676;</span><br />
+					<span><a href="">设置</a></span></li>
+			</ul>
+		</footer>
+		<script type="text/javascript">
+			$(function(){
+				$('#pos1').on('input',function(){
+					if($('#pos1').val()!==$('#pos').val()){
+						$('.te').html('密码不一致!')
+					}else{
+						$('.te').html('')
+					}
+				})
+				
+				$('#btn').on('tap',function(){
+					$.ajax({
+						type:"get",
+						url:"http://datainfo.duapp.com/shopdata/datainfo.html",
+						async:"true",
+						data:{status:'register',userID:$('#num').val(),password:$('#pos').val()},
+						success:
+					})
+					
+					
+					
+				})
+				
+				
+				
+				
+			})
+		</script>
+	</body>
+</html>
